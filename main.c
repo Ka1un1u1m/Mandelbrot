@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "mandelbrot.h"
-#include "input.h"
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 int main(int argc, char** argv) {
