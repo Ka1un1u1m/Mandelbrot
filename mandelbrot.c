@@ -3,7 +3,7 @@
 #include "mandelbrot.h"
 
 
-int mandelbrot(double c_real, double c_imag, int max_iteration){
+double mandelbrot(double c_real, double c_imag, int max_iteration){
 	double z_real = 0;
 	double z_imag = 0;
 	int iteration = 0;
@@ -15,11 +15,11 @@ int mandelbrot(double c_real, double c_imag, int max_iteration){
 		z_real = tmp;
 
 		if(z_real * z_real + z_imag * z_imag > 4){
-			return 0;
+			return 255.0 * (double)iteration / (double)max_iteration;
 		}
 		iteration++;
 	}
 
-	return 1;
+	return 0;
 
 }
